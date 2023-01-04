@@ -1,0 +1,31 @@
+.boardRow::after {
+  clear: both;
+  content: '';
+  display: table;
+}
+.square {
+  width: 60px;
+  height: 60px;
+  border: 2px solid #999;
+  background-color: #fff;
+  color: #000;
+  border-radius: 0;
+  font-size: 36px;
+  font-weight: 700;
+  float: left;
+  margin-right: -2px;
+  margin-top: -2px;
+}
+.statusStyle {
+  text-align: left;
+  margin-bottom: 10px;
+}
+.game {
+  display: flex;
+}
+.gameInfo {
+  margin-left: 20px;
+}
+.liMove {
+  text-align: left;
+}

@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import GameTicTacToe from './components/tic-tac-toe'
 import reactLogo from './assets/react.svg'
 import './App.css'
 
@@ -27,6 +28,8 @@ function App() {
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
       </p>
+      <h3>tic-tac-toe 🐱‍🏍</h3>
+      <GameTicTacToe />
     </div>
   )
 }
