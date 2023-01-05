@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { square, boardRow, statusStyle, game, gameInfo, liMove } from './ticTacToe.module.css'
 function Square({ value, onSquareClick }) {
-  return <button className={square} onClick={onSquareClick}>{value}</button>
+  return <div className={square} onClick={onSquareClick}><div style={{ marginTop: '-2px' }}>{value}</div></div>
 }
 
 function Board({ xIsNext, squares, onPlay }) {
