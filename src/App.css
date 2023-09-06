@@ -1,41 +1,72 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+}
+.App {
+  height: 2000px;
+}
+button {
+  padding: 6px 10px;
+  text-decoration: none;
+  border: none;
+  background-color: rgba(224, 224, 224, 0.936);
+  color: #333;
+  border-radius: 4px;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+section {
+  margin: 20px;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+button[type="primary"] {
+  background-color: rgb(78, 78, 231);
+  color: #fff;
+}
+
+.cir {
+  width: 150px;
+  height: 150px;
+  background-color: aquamarine;
+  border-radius: 50%;
+  margin-bottom: 40px;
+}
+
+@keyframes goLeft1 {
+  0% {
+    transform: translateX(0);
   }
+  50% {
+    transform: translateX(400px);
+  }
+  0% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes goLeft2 {
+  0% {
+    left: 0;
+  }
+  50% {
+    left: 400px;
+    background-color: blueviolet;
+  }
+  0% {
+    left: 0;
+  }
+}
+
+@keyframes goLeft3 {
   to {
-    transform: rotate(360deg);
+    transform: translateX(400px);
   }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.circle1 {
+  animation: goLeft3 1s linear infinite alternate;
 }
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
+.circle2 {
+  position: absolute;
+  left: 0;
+  animation: goLeft2 1s linear infinite;
 }

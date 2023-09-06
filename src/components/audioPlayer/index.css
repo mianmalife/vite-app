@@ -1,0 +1,27 @@
+.scrolllrc__container {
+  background: linear-gradient(0deg, #222, #666);
+  color: #666;
+  text-align: center;
+}
+.scrolllrc__container audio {
+  margin: 20px 0;
+}
+.scrolllrc__container .lrc__container {
+  height: 400px;
+  overflow: hidden;
+}
+.scrolllrc__container .lrc__container ul {
+  list-style: none;
+  transform: translateY(0);
+  transition: 0.5s all ease-out;
+}
+.scrolllrc__container .lrc__container ul li {
+  height: 30px;
+  line-height: 30px;
+  transition: 0.3s ease-in;
+  color: #666;
+}
+.scrolllrc__container .lrc__container ul li.active {
+  transform: scale(1.5);
+  color: #fff;
+}

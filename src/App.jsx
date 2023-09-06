@@ -1,37 +1,35 @@
-import { useState } from 'react'
-import GameTicTacToe from './components/tic-tac-toe'
-import reactLogo from './assets/react.svg'
-import './App.css'
-
+import { useEffect, useRef } from "react";
+import AudioPlayer from "./components/audioPlayer";
+import "./App.css";
 function App() {
-  const [count, setCount] = useState(0)
+  const count = useRef(0);
+  function handleAdd() {
+    count.current = count.current + 1;
+    alert(count.current);
+  }
+  function delay(duration) {
+    let start = Date.now();
+    while (Date.now() - start < duration) {}
+  }
+  function handleDelay(duration) {
+    delay(duration);
+  }
 
   return (
-    <div className="App">
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src="/vite-app/vite.svg" className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://reactjs.org" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Hello, Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
+    <section className="App">
+      <section>
+        <button onClick={handleAdd}>count+</button>
+      </section>
+      <section>
+        <button type="primary" onClick={() => handleDelay(5000)}>
+          延时5s
         </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-      <h3>tic-tac-toe 🐱‍🏍</h3>
-      <GameTicTacToe />
-    </div>
-  )
+      </section>
+      <div className="cir circle2"></div>
+      <div className="cir circle1"></div>
+      <AudioPlayer />
+    </section>
+  );
 }
 
-export default App
+export default App;
