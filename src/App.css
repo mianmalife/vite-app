@@ -5,9 +5,9 @@
 @font-face {
   font-family: "dingjb";
   src:
-    url("./font/DingTalk_JinBuTi_Regular.woff2") format("woff2"),
-    url("./font/DingTalk_JinBuTi_Regular.woff") format("woff"),
-    url("./font/DingTalk_JinBuTi_Regular.ttf") format("truetype");
+    url("/font/DingTalk_JinBuTi_Regular.woff2") format("woff2"),
+    url("/font/DingTalk_JinBuTi_Regular.woff") format("woff"),
+    url("/font/DingTalk_JinBuTi_Regular.ttf") format("truetype");
 }
 :root {
   --primary-color: #96b6c5;
