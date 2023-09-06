@@ -17,8 +17,10 @@ function Square({ value, onSquareClick }) {
 
 function Board({ xIsNext, squares, onPlay }) {
   function handleClick(i) {
+    console.log(squares);
     if (squares[i] || calculateWinner(squares)) return;
     const nextSquares = squares.slice();
+    console.log(nextSquares);
     if (xIsNext) {
       nextSquares[i] = "x";
     } else {
@@ -108,7 +110,9 @@ export default function GameTicTacToe() {
   const currentSquares = history[currentMove];
   const xIsNext = currentMove % 2 === 0;
   function handlePlay(nextSquares) {
+    console.log(nextSquares, "nextSquares");
     const nextHistory = [...history.slice(0, currentMove + 1), nextSquares];
+    console.log(nextHistory, "nextHistory");
     setHistory(nextHistory);
     setCurrentMove(nextHistory.length - 1);
   }

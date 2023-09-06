@@ -2,71 +2,37 @@
   margin: 0;
   padding: 0;
 }
-.App {
-  height: 2000px;
+@font-face {
+  font-family: "dingjb";
+  src:
+    url("./font/DingTalk_JinBuTi_Regular.woff2") format("woff2"),
+    url("./font/DingTalk_JinBuTi_Regular.woff") format("woff"),
+    url("./font/DingTalk_JinBuTi_Regular.ttf") format("truetype");
+}
+:root {
+  --primary-color: #96b6c5;
+  --base-color: #fff;
+  --panel-bgcolor: #eee0c9;
+  --btn-bgcolor: #adc4ce;
+}
+body {
+  background-color: #f1f0e8;
+  font-family: "dingjb";
+}
+.container {
+  margin: 0 auto;
+  width: 80%;
 }
 button {
   padding: 6px 10px;
   text-decoration: none;
   border: none;
-  background-color: rgba(224, 224, 224, 0.936);
-  color: #333;
+  background-color: var(--btn-bgcolor);
+  color: var(--base-color);
   border-radius: 4px;
 }
 
-section {
-  margin: 20px;
-}
-
 button[type="primary"] {
-  background-color: rgb(78, 78, 231);
-  color: #fff;
-}
-
-.cir {
-  width: 150px;
-  height: 150px;
-  background-color: aquamarine;
-  border-radius: 50%;
-  margin-bottom: 40px;
-}
-
-@keyframes goLeft1 {
-  0% {
-    transform: translateX(0);
-  }
-  50% {
-    transform: translateX(400px);
-  }
-  0% {
-    transform: translateX(0);
-  }
-}
-
-@keyframes goLeft2 {
-  0% {
-    left: 0;
-  }
-  50% {
-    left: 400px;
-    background-color: blueviolet;
-  }
-  0% {
-    left: 0;
-  }
-}
-
-@keyframes goLeft3 {
-  to {
-    transform: translateX(400px);
-  }
-}
-
-.circle1 {
-  animation: goLeft3 1s linear infinite alternate;
-}
-.circle2 {
-  position: absolute;
-  left: 0;
-  animation: goLeft2 1s linear infinite;
+  background-color: var(--primary-color);
+  color: var(--base-color);
 }

@@ -1,0 +1,47 @@
+.cir {
+  width: 150px;
+  height: 150px;
+  background-color: aquamarine;
+  border-radius: 50%;
+  margin-bottom: 40px;
+}
+
+@keyframes goLeft1 {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(400px);
+  }
+  0% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes goLeft2 {
+  0% {
+    left: 20%;
+  }
+  50% {
+    left: 800px;
+    background-color: blueviolet;
+  }
+  0% {
+    left: 20%;
+  }
+}
+
+@keyframes goLeft3 {
+  to {
+    transform: translateX(400px);
+  }
+}
+
+.circle1 {
+  animation: goLeft3 1s linear infinite alternate;
+}
+.circle2 {
+  position: absolute;
+  left: 20%;
+  animation: goLeft2 1s linear infinite;
+}

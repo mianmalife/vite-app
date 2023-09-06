@@ -1,0 +1,14 @@
+.panelCls {
+  background-color: var(--panel-bgcolor);
+  border-radius: 4px;
+  margin-top: 10px;
+}
+.panelCls .title {
+  font-size: 18px;
+  padding: 6px 20px;
+  border-bottom: 1px solid #f1f0e8;
+  color: var(--primary-color);
+}
+.panelCls .content {
+  padding: 20px;
+}

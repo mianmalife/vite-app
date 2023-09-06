@@ -1,6 +1,6 @@
 .boardRow::after {
   clear: both;
-  content: '';
+  content: "";
   display: table;
 }
 .square {
@@ -27,8 +27,9 @@
   display: flex;
 }
 .gameInfo {
-  margin-left: 20px;
+  margin-left: 40px;
 }
 .liMove {
   text-align: left;
+  margin-bottom: 10px;
 }
