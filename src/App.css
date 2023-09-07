@@ -10,18 +10,32 @@
     url("/font/DingTalk_JinBuTi_Regular.ttf") format("truetype");
 }
 :root {
+  --bg-light-color: #f1f0e8;
   --primary-color: #96b6c5;
   --base-color: #fff;
-  --panel-bgcolor: #eee0c9;
   --btn-bgcolor: #adc4ce;
+  --panel-bgcolor: #eee0c9;
+
+  --bg-dark-color: #040d12;
+  --primary-color-dark: #93b1a6;
+  --panel-bgcolor-dark: #183d3d;
+  --base-color-dark: #fff;
+}
+html {
+  width: 100%;
+  background-color: var(--bg-light-color);
+  transition: 0.3s;
+}
+html.dark {
+  background-color: var(--bg-dark-color);
 }
 body {
-  background-color: #f1f0e8;
   font-family: "dingjb";
+  display: flex;
+  justify-content: center;
 }
-.container {
-  margin: 0 auto;
-  width: 80%;
+#root {
+  width: 60%;
 }
 button {
   padding: 6px 10px;
@@ -35,4 +49,8 @@ button {
 button[type="primary"] {
   background-color: var(--primary-color);
   color: var(--base-color);
+}
+button[type="primary dark"] {
+  background-color: var(--primary-color-dark);
+  color: var(--base-color-dark);
 }

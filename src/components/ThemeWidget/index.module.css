@@ -1,0 +1,14 @@
+.theme__widget {
+  position: fixed;
+  padding: 10px;
+  bottom: 60px;
+  right: 60px;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  background-color: var(--primary-color);
+  border-radius: 50%;
+}
+.theme__widget:hover {
+  opacity: 0.8;
+}

@@ -7,6 +7,11 @@ export default defineConfig({
   plugins: [react()],
   base: "/vite-app/",
   resolve: {
-    alias: path.resolve(__dirname, "src"),
+    alias: [
+      {
+        find: "@",
+        replacement: path.resolve(__dirname, "src"),
+      },
+    ],
   },
 });

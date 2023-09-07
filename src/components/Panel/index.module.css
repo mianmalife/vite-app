@@ -1,0 +1,25 @@
+.panelCls:first-child {
+  margin-top: 10px;
+}
+.panelCls {
+  background-color: var(--panel-bgcolor);
+  border-radius: 4px;
+  margin-bottom: 10px;
+  transition: 0.3s;
+}
+.panelCls__dark {
+  background-color: var(--panel-bgcolor-dark);
+}
+.titleCls {
+  font-size: 18px;
+  padding: 10px 20px;
+  border-bottom: 1px solid var(--bg-light-color);
+  color: var(--primary-color);
+}
+.titleCls_dark {
+  color: var(--primary-color-dark);
+  border-bottom-color: var(--primary-color-dark);
+}
+.contentCls {
+  padding: 20px;
+}

@@ -5,6 +5,7 @@ import { transformLrc, findLrcIndex, offsetNum } from "./scrollLrc.js";
 const lrc = transformLrc(hum);
 
 export default function AudioPlayer() {
+  const containerRef = useRef();
   const audioRef = useRef(0);
   const ulRef = useRef(0);
   useEffect(() => {
@@ -24,7 +25,7 @@ export default function AudioPlayer() {
     }
   }
   return (
-    <div className="scrolllrc__container">
+    <div className="scrolllrc__container" ref={containerRef}>
       <audio
         ref={audioRef}
         onTimeUpdate={onTimeUpdate}

@@ -1,6 +1,8 @@
-import { useRef } from "react";
+import { useContext } from "react";
+import { ThemeContext } from "@/context/ThemeContext";
 import "./index.css";
 function TransformDemo() {
+  const theme = useContext(ThemeContext);
   function delay(duration) {
     let start = Date.now();
     while (Date.now() - start < duration) {}
@@ -12,7 +14,10 @@ function TransformDemo() {
   return (
     <section>
       <section>
-        <button type="primary" onClick={() => handleDelay(5000)}>
+        <button
+          type={theme === "dark" ? "primary dark" : "primary"}
+          onClick={() => handleDelay(5000)}
+        >
           延时5s
         </button>
       </section>

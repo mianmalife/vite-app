@@ -1,23 +1,30 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
+import { ThemeContext } from "@/context/ThemeContext";
 import {
   square,
+  square__dark,
   boardRow,
   statusStyle,
+  statusStyle__dark,
   game,
   gameInfo,
   liMove,
 } from "./ticTacToe.module.css";
 function Square({ value, onSquareClick }) {
+  const theme = useContext(ThemeContext);
   return (
-    <div className={square} onClick={onSquareClick}>
+    <div
+      className={theme === "dark" ? `${square} ${square__dark}` : `${square}`}
+      onClick={onSquareClick}
+    >
       <div style={{ marginTop: "-2px" }}>{value}</div>
     </div>
   );
 }
 
 function Board({ xIsNext, squares, onPlay }) {
+  const theme = useContext(ThemeContext);
   function handleClick(i) {
-    console.log(squares);
     if (squares[i] || calculateWinner(squares)) return;
     const nextSquares = squares.slice();
     console.log(nextSquares);
@@ -37,7 +44,15 @@ function Board({ xIsNext, squares, onPlay }) {
   }
   return (
     <>
-      <div className={statusStyle}>{status}</div>
+      <div
+        className={
+          theme === "dark"
+            ? `${statusStyle} ${statusStyle__dark}`
+            : `${statusStyle}`
+        }
+      >
+        {status}
+      </div>
       <div className={boardRow}>
         <Square
           value={squares[0]}
@@ -105,6 +120,7 @@ function calculateWinner(squares) {
 }
 
 export default function GameTicTacToe() {
+  const theme = useContext(ThemeContext);
   const [currentMove, setCurrentMove] = useState(0);
   const [history, setHistory] = useState([Array(9).fill(null)]);
   const currentSquares = history[currentMove];
@@ -128,7 +144,12 @@ export default function GameTicTacToe() {
     }
     return (
       <li key={move} className={liMove}>
-        <button onClick={() => jumpTo(move)}>{description}</button>
+        <button
+          type={theme === "dark" ? "primary dark" : "primary"}
+          onClick={() => jumpTo(move)}
+        >
+          {description}
+        </button>
       </li>
     );
   });
