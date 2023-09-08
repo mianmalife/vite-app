@@ -20,9 +20,6 @@ function App() {
     <ThemeContext.Provider value={theme}>
       <ThemeWidget onClick={onToggleTheme} />
       <section className="container">
-        <Panel title="transorm动画运行在合成线程上(本地运行才生效)">
-          <TransformDemo />
-        </Panel>
         <Panel title="井字小游戏">
           <GameTicTacToe />
         </Panel>
