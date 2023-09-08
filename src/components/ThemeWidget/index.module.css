@@ -9,7 +9,8 @@
   cursor: pointer;
   background-color: var(--primary-color);
   border-radius: 50%;
+  opacity: 0.8;
 }
 .theme__widget:hover {
-  opacity: 0.8;
+  opacity: 0.6;
 }

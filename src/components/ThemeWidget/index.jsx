@@ -11,7 +11,7 @@ export default function ThemeWidget({ onClick }) {
       <img
         className={theme__widget}
         onClick={onClick}
-        src={theme === "light" ? lightPng : darkPng}
+        src={theme === "light" ? darkPng : lightPng}
         alt=""
       />
     </>
