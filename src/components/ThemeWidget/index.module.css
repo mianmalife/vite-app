@@ -1,5 +1,6 @@
 .theme__widget {
   position: fixed;
+  z-index: 99;
   padding: 10px;
   bottom: 60px;
   right: 60px;
