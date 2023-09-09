@@ -1,10 +1,6 @@
-.panelCls:first-child {
-  margin-top: 10px;
-}
 .panelCls {
   background-color: var(--panel-bgcolor);
   border-radius: 4px;
-  margin-bottom: 10px;
   transition: 0.3s;
 }
 .panelCls__dark {

@@ -20,8 +20,11 @@
   line-height: 30px;
   transition: 0.3s ease-in;
   color: #666;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .scrolllrc__container .lrc__container ul li.active {
-  transform: scale(1.5);
+  transform: scale(1.3);
   color: #fff;
 }

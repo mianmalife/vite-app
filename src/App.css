@@ -16,16 +16,21 @@
   --btn-bgcolor: #adc4ce;
   --panel-bgcolor: #eee0c9;
 
-  --bg-dark-color: #040d12;
-  --primary-color-dark: #93b1a6;
-  --panel-bgcolor-dark: #183d3d;
-  --base-color-dark: #fff;
+  --bg-dark-color: #222831;
+  --primary-color-dark: #ffd369;
+  --panel-bgcolor-dark: #393e46;
+  --base-color-dark: #393e46;
 }
 html {
   width: 100%;
   height: 100%;
   background-color: var(--bg-light-color);
   transition: 0.3s;
+}
+@media screen and (max-width: 750px) {
+  html {
+    font-size: 14px;
+  }
 }
 html.dark {
   background-color: var(--bg-dark-color);
@@ -35,9 +40,6 @@ body {
   height: 100%;
 }
 #root {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   min-height: 100%;
 }
 button {

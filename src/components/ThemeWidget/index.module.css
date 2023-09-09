@@ -2,15 +2,12 @@
   position: fixed;
   z-index: 99;
   padding: 10px;
-  bottom: 60px;
-  right: 60px;
+  bottom: 2rem;
+  right: 2rem;
   width: 30px;
   height: 30px;
   cursor: pointer;
   background-color: var(--primary-color);
   border-radius: 50%;
   opacity: 0.8;
-}
-.theme__widget:hover {
-  opacity: 0.6;
 }

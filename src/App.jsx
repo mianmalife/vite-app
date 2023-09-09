@@ -6,6 +6,7 @@ import AudioPlayer from "./components/audioPlayer";
 import TransformDemo from "./components/tranformDemo";
 import GameTicTacToe from "./components/ticTacToe";
 import "./App.css";
+import { container } from "./index.module.css";
 function App() {
   const [theme, setTheme] = useState("light");
   function onToggleTheme() {
@@ -19,7 +20,7 @@ function App() {
   return (
     <ThemeContext.Provider value={theme}>
       <ThemeWidget onClick={onToggleTheme} />
-      <section className="container">
+      <section className={container}>
         <Panel title="井字小游戏">
           <GameTicTacToe />
         </Panel>

@@ -6,6 +6,9 @@ import react from "@vitejs/plugin-react-swc";
 export default defineConfig({
   plugins: [react()],
   base: "/vite-app/",
+  server: {
+    host: "0.0.0.0",
+  },
   resolve: {
     alias: [
       {
